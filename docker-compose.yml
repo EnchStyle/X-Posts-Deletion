@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  twitter-cleaner:
+    build: .
+    volumes:
+      - ./config.py:/app/config.py
+    environment:
+      - DISPLAY=:99
+    command: --headless
